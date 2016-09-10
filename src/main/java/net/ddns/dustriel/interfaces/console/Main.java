@@ -5,6 +5,10 @@ package net.ddns.dustriel.interfaces.console;
  */
 public class Main {
 
+    private Main() {
+        // Hiding the private constructor
+    }
+
     public static void main(String ... arguments) {
 
         System.out.println("Using " + arguments[0] + " as arguments");
