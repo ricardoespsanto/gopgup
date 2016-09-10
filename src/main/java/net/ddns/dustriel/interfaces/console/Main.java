@@ -1,6 +1,6 @@
 package net.ddns.dustriel.interfaces.console;
 
-import java.util.Arrays;
+import net.ddns.dustriel.interfaces.console.validators.ArgumentValidator;
 
 /**
  * Main, executable, entry point to start our gop gup system as a console application
@@ -12,16 +12,6 @@ public class Main {
     }
 
     public static void main(String... arguments) {
-
-        assertArgumentsAreValid(arguments);
-        System.out.println("Using " + arguments[0] + " as arguments");
+        ArgumentValidator.assertArgumentsAreValid(arguments);
     }
-
-    private static void assertArgumentsAreValid(String[] arguments) {
-        if (Arrays.stream(arguments).filter(argument -> argument.equalsIgnoreCase("API")).count() != 1) {
-            throw new InvalidArgumentsException(
-                    "'API' is a required argument. Please specify the API to be used when running your query");
-        }
-    }
-
 }
