@@ -10,6 +10,12 @@ A system to search for albums and movies through public APIs
 This product uses the public APIs but it is not endorsed or certified by
 neither of them.
 
+**Compile this application**
+The easiest way to compile this application is to use maven.
+
+Simply type:
+`mvn clean package`
+
 **Run this application**
 With two parameters: 
 - api - with a value of omdb or spotify to query movies or albums 
@@ -17,6 +23,7 @@ With two parameters:
 - movie - if omdb api was selected and ensure a movie title is given
 - album - if spotify api was selected and ensure a album name is given
 
-Example: java -Dapi=omdb -Dmovie="Indiana Jones" -jar gopGup-1.0-SNAPSHOT.jar
+Example: 
+`java -Dapi=omdb -Dmovie="Indiana Jones" -jar gopGup-1.0-SNAPSHOT.jar`
 or 
-java -Dapi=spotify -Dalbum=Nine -jar gopGup-1.0-SNAPSHOT.jar
+`java -Dapi=spotify -Dalbum=Nine -jar gopGup-1.0-SNAPSHOT.jar`
