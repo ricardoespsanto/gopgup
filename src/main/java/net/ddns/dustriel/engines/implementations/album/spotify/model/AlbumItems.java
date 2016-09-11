@@ -1,4 +1,4 @@
-package net.ddns.dustriel.model.album;
+package net.ddns.dustriel.engines.implementations.album.spotify.model;
 
 import java.util.List;
 
@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
+ * Simple wrapper to map the data received from this particular implementation
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class AlbumItems {

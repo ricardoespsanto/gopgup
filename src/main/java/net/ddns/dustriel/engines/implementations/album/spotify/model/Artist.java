@@ -1,4 +1,4 @@
-package net.ddns.dustriel.model.album;
+package net.ddns.dustriel.engines.implementations.album.spotify.model;
 
 import java.util.Objects;
 

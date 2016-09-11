@@ -1,4 +1,4 @@
-package net.ddns.dustriel.model.album;
+package net.ddns.dustriel.engines.implementations.album.spotify.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListOfAlbumSearchResults {
 
     @JsonProperty("albums")
-    private AlbumItems albumItems;
+    private AlbumItems albumItems = new AlbumItems();
 
     public AlbumItems getAlbumItems() {
         return albumItems;

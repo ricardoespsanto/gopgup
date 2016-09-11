@@ -8,6 +8,10 @@
     <artifactId>gopGup</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
@@ -35,13 +39,6 @@
             <groupId>com.mashape.unirest</groupId>
             <artifactId>unirest-java</artifactId>
             <version>1.4.9</version>
-        </dependency>
-
-        <!-- argument parsing and validation -->
-        <dependency>
-            <groupId>com.github.jankroken</groupId>
-            <artifactId>commandline</artifactId>
-            <version>1.7.0</version>
         </dependency>
 
         <!-- Tests -->

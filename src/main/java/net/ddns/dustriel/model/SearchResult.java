@@ -6,6 +6,9 @@ package net.ddns.dustriel.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+/**
+ * A marker class to match search results to a type
+ */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public abstract class SearchResult {
 

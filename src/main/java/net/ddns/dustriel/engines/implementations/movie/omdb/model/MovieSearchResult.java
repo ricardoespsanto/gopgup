@@ -1,4 +1,6 @@
-package net.ddns.dustriel.model.movie;
+package net.ddns.dustriel.engines.implementations.movie.omdb.model;
+
+import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -53,5 +55,10 @@ public class MovieSearchResult extends SearchResult {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    @Override
+    public String toString() {
+        return Objects.toString("Movie: { Title: " + title + ", year: " + date + ", Director: " + director + "}");
     }
 }

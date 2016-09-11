@@ -1,11 +1,9 @@
 package net.ddns.dustriel.interfaces.console;
 
-import com.mashape.unirest.http.exceptions.UnirestException;
+import java.util.Collection;
 
 import net.ddns.dustriel.engines.QueryExecutor;
-import net.ddns.dustriel.interfaces.console.arguments.Arguments;
-import net.ddns.dustriel.interfaces.console.arguments.ArgumentsValidator;
-import net.ddns.dustriel.model.movie.ListOfMovieSearchResults;
+import net.ddns.dustriel.model.SearchResult;
 
 /**
  * Main, executable, entry point to start our gop gup system as a console application
@@ -17,15 +15,7 @@ public class Main {
     }
 
     public static void main(String... arguments) {
-        Arguments validatedArguments = ArgumentsValidator.validateArguments(arguments);
-
-        ListOfMovieSearchResults results = null;
-        try {
-            results = QueryExecutor.execute(validatedArguments);
-        } catch (UnirestException e) {
-            e.printStackTrace();
-        }
-
+        Collection<? extends SearchResult> results = QueryExecutor.execute();
         OutputProcessor.displayResults(results);
     }
 }
