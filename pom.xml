@@ -22,6 +22,29 @@
         </plugins>
     </build>
     <dependencies>
+
+        <!-- mapping our search results -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.6.1</version>
+        </dependency>
+
+        <!-- simplifying REST calls -->
+        <dependency>
+            <groupId>com.mashape.unirest</groupId>
+            <artifactId>unirest-java</artifactId>
+            <version>1.4.9</version>
+        </dependency>
+
+        <!-- argument parsing and validation -->
+        <dependency>
+            <groupId>com.github.jankroken</groupId>
+            <artifactId>commandline</artifactId>
+            <version>1.7.0</version>
+        </dependency>
+
+        <!-- Tests -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

@@ -1,22 +1,27 @@
 package net.ddns.dustriel.model.movie;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import net.ddns.dustriel.model.SearchResult;
+
 /**
  * The result of searching for a movie will fill in the details in this pojo. This class aims to hold basic movie
  * details that have been curated to focus only on the most interesting and common references for a movie.
  */
-public class MovieSearchResult {
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class MovieSearchResult extends SearchResult {
 
+    @JsonProperty("Director")
     private String director;
 
+    private String imdbID;
+
+    @JsonProperty("Title")
     private String title;
 
+    @JsonProperty("Year")
     private String date;
-
-    public MovieSearchResult(String director, String title, String date) {
-        this.director = director;
-        this.title = title;
-        this.date = date;
-    }
 
     public String getDirector() {
         return director;
@@ -26,12 +31,12 @@ public class MovieSearchResult {
         this.director = director;
     }
 
-    public String getTitle() {
-        return title;
+    public String getImdbID() {
+        return imdbID;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setImdbID(String imdbID) {
+        this.imdbID = imdbID;
     }
 
     public String getDate() {
@@ -40,5 +45,13 @@ public class MovieSearchResult {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }
